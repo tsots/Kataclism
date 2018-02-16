@@ -1,0 +1,45 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{description}}">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body class="{{page}}">
+
+    <div class="off-canvas position-left" id="offCanvasLeftOverlap" data-off-canvas data-transition="overlap">
+      {{> offcanvas-nav-links}}
+    </div>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="nav-bar">
+          <div class="nav-bar-left">
+            <a class="nav-bar-logo"><img class="logo" src="https://placehold.it/150x30"></a>
+          </div>
+          <div class="nav-bar-right">
+            <ul class="menu">
+              <li>
+                <button class="offcanvas-trigger" type="button" data-open="offCanvasLeftOverlap">
+                  <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
+                  <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </div>
+                </button>
+              </li>
+            </ul>
+        </div>
+      </div>
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+    </div>
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

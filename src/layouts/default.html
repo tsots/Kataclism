@@ -1,0 +1,50 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="author" content="Tsotetsi Mosala">
+    <title>{{#if meta-title}}{{meta-title}} |{{/if}} Katalist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body class="{{page}}">
+
+  <div class="nav-container" id="topbar">
+    <div class="grid-container">
+      <div class="grid-x align-center">
+        <div class="medium-10 cell">
+          <nav class="top-bar topbar-responsive">
+            <div class="top-bar-title">
+              <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle></button>
+              </span>
+              <a class="topbar-responsive-logo" href="./"><strong>Site Title</strong></a>
+            </div>
+            <div id="topbar-responsive" class="topbar-responsive-links">
+              <div class="top-bar-right">
+                <ul class="menu simple vertical medium-horizontal">
+                  {{> topbar-nav-links}}
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>
